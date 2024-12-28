@@ -1,0 +1,76 @@
+Clean Architecture Folder Structure
+
+HouseBrokerApp/
+HouseBrokerApplication.Domain/ (refrences HouseBrokerApplication.Shared)
+	- Entities/
+		Property.cs
+	- Interfaces
+		IPropertyRepository.cs
+HouseBrokerApplication.Application/ (refrences HouseBrokerApplication.Domain)
+	- Interfaces/
+		IPropertyService.cs
+	- Services/
+		PropertyService.cs
+	- DTOs/
+		ProperttDto.cs
+
+HouseBrokerApplication.Infrastructure/ (refrences HouseBrokerApplication.Shared, HouseBrokerApplication.Domain, 		HouseBrokerApplication.Application )
+	- Persistence/
+		AppDbContext.cs
+	- Helpers/
+		PaginatedListFactory.cs
+	- Repositories/
+		PropertyRepository
+	- Identity/
+		SeedData.cs
+	- Migrations/
+
+HouseBrokerApplication.Shared/
+	- Helpers/
+		PaginatedList.cs
+
+HouseBrokerApplication.Tests/ (references HouseBrokerApplication.Application)
+	- PropertyServiceTests.cs
+
+HouseBrokerApplication.WebApi/ (references HouseBrokerApplication.Application, 						HouseBrokerApplication.Infrastructure)
+	- Controllers
+		-PropertyController
+		-AuthenticationController
+
+
+Project Layers Overview
+
+1. Domain Layer
+- Contains the core business logic, models, and interfaces that are independent of any frameworks.
+- Include Entities: Property.
+- Include Interfaces: IPropertyRepository which is implemented in the Infrastructure Layer
+
+
+2. Application Layer
+- contains the use cases, business logic, and application-specific operations
+- implements services and DTOs to handle communication between layers
+- calls repositories and communicates with the domain layer.
+- Interfaces: IPropertyService
+- Services: PropertyService
+- DTOs: PropertyDto
+
+3. Infrastructure Layer
+- contains the implementation of external dependencies, such as database access, third-party services, and so on
+- Implements EF Core, Repository classes and other external dependencies
+- Persistence: AppDbContext
+- Migrations
+- Identity
+
+4. API Layer(or Presentation Layer)
+- Contains the ASP.NET Core Web Api
+- exposes endpoints for client applications to interact with the backend services.
+- Controllers: PropertyController, AuthenticationController
+
+
+
+	
+
+
+
+
+
