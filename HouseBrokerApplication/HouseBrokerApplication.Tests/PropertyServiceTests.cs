@@ -1,17 +1,21 @@
 ﻿using FluentAssertions;
 using HouseBrokerApplication.Application.Interfaces;
+using HouseBrokerApplication.Application.Services;
 using HouseBrokerApplication.Domain.Entities;
+using HouseBrokerApplication.Domain.Interfaces;
 using NSubstitute;
 
 namespace HouseBrokerApplication.Tests;
 
 public class PropertyServiceTests
 {
-    private readonly IPropertyService _propertyRepository;
+    private readonly IPropertyRepository _propertyRepository;
+    private readonly PropertyService _propertyService;
 
     public PropertyServiceTests()
     {
-        _propertyRepository = Substitute.For<IPropertyService>();
+        _propertyRepository = Substitute.For<IPropertyRepository>();
+        _propertyService = new PropertyService(_propertyRepository);
     }
 
     [Fact]
@@ -29,7 +33,7 @@ public class PropertyServiceTests
         };
         
         //Act
-        await _propertyRepository.AddAsync(property);
+        await _propertyService.AddAsync(property);
 
         //Assert
         await _propertyRepository.Received(1).AddAsync(Arg.Is<Property>(p => p == property));
@@ -64,7 +68,7 @@ public class PropertyServiceTests
         _propertyRepository.GetAllAsync().Returns(properties);
 
         // Act
-        var result = await _propertyRepository.GetAllAsync();
+        var result = await _propertyService.GetAllAsync();
 
         // Assert
         result.Should().HaveCount(2);
@@ -92,7 +96,7 @@ public class PropertyServiceTests
         _propertyRepository.GetByIdAsync(propertyId).Returns(expectedProperty);
 
         // act
-        var result = await _propertyRepository.GetByIdAsync(propertyId);
+        var result = await _propertyService.GetByIdAsync(propertyId);
 
         // assert
         result.Should().NotBeNull();
@@ -116,7 +120,7 @@ public class PropertyServiceTests
         _propertyRepository.DeleteAsync(propertyId).Returns(Task.CompletedTask);
 
         // act
-        await _propertyRepository.DeleteAsync(propertyId);
+        await _propertyService.DeleteAsync(propertyId);
 
         // assert
         await _propertyRepository.Received(1).DeleteAsync(Arg.Is<int>(id => id == propertyId));
@@ -140,7 +144,7 @@ public class PropertyServiceTests
         _propertyRepository.UpdateAsync(Arg.Any<Property>()).Returns(Task.CompletedTask);
 
         // act
-        await _propertyRepository.UpdateAsync(property);
+        await _propertyService.UpdateAsync(property);
 
         // assert
         await _propertyRepository.Received(1).UpdateAsync(Arg.Is<Property>(p => p.Id == property.Id && p.PropertyType == "Updated Property Type"));
