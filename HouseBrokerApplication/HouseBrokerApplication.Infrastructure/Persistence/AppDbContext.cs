@@ -1,5 +1,4 @@
 ﻿using HouseBrokerApplication.Domain.Entities;
-using HouseBrokerApplication.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +12,7 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        // uncomment following region if you want to seed 1000 datas to test, pagination, filtering
+        // uncomment following region if you want to seed 1000 Properties datas to test pagination, filtering
         #region Seed1000PropertiesData
         //var propertyTypes = new[] { "Apartment", "Villa", "Cottage", "Bunglow", "Rent" };
         //var locations = new[] { "Bhatbhateni", "DilliBazar", "Putalisadak", "Baluwatar", "Naxal", "Hetauda", "Biratnagar", "Pokhara" };
