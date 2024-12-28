@@ -1,6 +1,6 @@
 # House Broker Application Setup Guide
 
-This document outlines the steps to set up and run the HouseBrokerApplicationMVP project.
+This document outlines the steps to set up and run the HouseBrokerApplicationMVP project. 
 
 ### Technology Used:
 
@@ -78,7 +78,7 @@ This document outlines the steps to set up and run the HouseBrokerApplicationMVP
 **Add Initial Migration**
 
 ```bash
-Add-Migration InitialMigration -Project         \HouseBrokerApplication.Infrastructure -StartupProject  \HouseBrokerApplication.WebApi
+Add-Migration InitialMigration -Project \HouseBrokerApplication.Infrastructure -StartupProject  \HouseBrokerApplication.WebApi
 ```
 
 **Update The Database**
