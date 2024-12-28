@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HouseBrokerApplication", "HouseBrokerApplication", "{CFD15B91-40C2-4F13-A6C3-9C343C0CF1C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBrokerApplication.Domain", "HouseBrokerApplication\HouseBrokerApplication.Domain\HouseBrokerApplication.Domain.csproj", "{3823DFA1-6F27-449A-9D9C-BE101E9CA275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBrokerApplication.Application", "HouseBrokerApplication\HouseBrokerApplication.Application\HouseBrokerApplication.Application.csproj", "{2C10D3E4-EF44-4A84-9977-320DCA8C5611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBrokerApplication.Infrastructure", "HouseBrokerApplication\HouseBrokerApplication.Infrastructure\HouseBrokerApplication.Infrastructure.csproj", "{50E1BAE4-922E-469C-9358-CE355CAF0630}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBrokerApplication.WebApi", "HouseBrokerApplication\HouseBrokerApplication.WebApi\HouseBrokerApplication.WebApi.csproj", "{380AF077-7355-4CB1-8DB0-C9EE26292314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBrokerApplication.Tests", "HouseBrokerApplication\HouseBrokerApplication.Tests\HouseBrokerApplication.Tests.csproj", "{D466E254-93CE-48E5-9CF2-C1DDCEF451C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBrokerApplication.Shared", "HouseBrokerApplication\HouseBrokerApplication.Shared\HouseBrokerApplication.Shared.csproj", "{C3C98AEA-C265-412B-9D84-D6555D89B7BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3823DFA1-6F27-449A-9D9C-BE101E9CA275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3823DFA1-6F27-449A-9D9C-BE101E9CA275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3823DFA1-6F27-449A-9D9C-BE101E9CA275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3823DFA1-6F27-449A-9D9C-BE101E9CA275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C10D3E4-EF44-4A84-9977-320DCA8C5611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C10D3E4-EF44-4A84-9977-320DCA8C5611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C10D3E4-EF44-4A84-9977-320DCA8C5611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C10D3E4-EF44-4A84-9977-320DCA8C5611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E1BAE4-922E-469C-9358-CE355CAF0630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E1BAE4-922E-469C-9358-CE355CAF0630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E1BAE4-922E-469C-9358-CE355CAF0630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E1BAE4-922E-469C-9358-CE355CAF0630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{380AF077-7355-4CB1-8DB0-C9EE26292314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{380AF077-7355-4CB1-8DB0-C9EE26292314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{380AF077-7355-4CB1-8DB0-C9EE26292314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{380AF077-7355-4CB1-8DB0-C9EE26292314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D466E254-93CE-48E5-9CF2-C1DDCEF451C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D466E254-93CE-48E5-9CF2-C1DDCEF451C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D466E254-93CE-48E5-9CF2-C1DDCEF451C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D466E254-93CE-48E5-9CF2-C1DDCEF451C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C98AEA-C265-412B-9D84-D6555D89B7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C98AEA-C265-412B-9D84-D6555D89B7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C98AEA-C265-412B-9D84-D6555D89B7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C98AEA-C265-412B-9D84-D6555D89B7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3823DFA1-6F27-449A-9D9C-BE101E9CA275} = {CFD15B91-40C2-4F13-A6C3-9C343C0CF1C5}
+		{2C10D3E4-EF44-4A84-9977-320DCA8C5611} = {CFD15B91-40C2-4F13-A6C3-9C343C0CF1C5}
+		{50E1BAE4-922E-469C-9358-CE355CAF0630} = {CFD15B91-40C2-4F13-A6C3-9C343C0CF1C5}
+		{380AF077-7355-4CB1-8DB0-C9EE26292314} = {CFD15B91-40C2-4F13-A6C3-9C343C0CF1C5}
+		{D466E254-93CE-48E5-9CF2-C1DDCEF451C7} = {CFD15B91-40C2-4F13-A6C3-9C343C0CF1C5}
+		{C3C98AEA-C265-412B-9D84-D6555D89B7BC} = {CFD15B91-40C2-4F13-A6C3-9C343C0CF1C5}
+	EndGlobalSection
+EndGlobal
